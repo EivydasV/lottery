@@ -7,6 +7,7 @@ import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
+import "hardhat-contract-sizer";
 
 dotenv.config();
 
@@ -26,7 +27,11 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 const config: HardhatUserConfig = {
   solidity: "0.8.8",
   defaultNetwork: "hardhat",
-
+  networks: {
+    hardhat: {
+      chainId: 31337,
+    },
+  },
   namedAccounts: {
     deployer: {
       default: 0,
@@ -35,6 +40,6 @@ const config: HardhatUserConfig = {
       default: 1,
     },
   },
- };
+};
 
 export default config;

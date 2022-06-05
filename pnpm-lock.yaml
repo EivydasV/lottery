@@ -24,6 +24,7 @@ specifiers:
   ethereum-waffle: ^3.0.0
   ethers: ^5.0.0
   hardhat: ^2.9.7
+  hardhat-contract-sizer: ^2.5.1
   hardhat-deploy: ^0.11.10
   hardhat-gas-reporter: ^1.0.4
   prettier: ^2.3.2
@@ -58,6 +59,7 @@ devDependencies:
   ethereum-waffle: 3.4.4_typescript@4.7.3
   ethers: 5.6.8
   hardhat: 2.9.7_chai@4.3.6
+  hardhat-contract-sizer: 2.5.1_hardhat@2.9.7
   hardhat-deploy: 0.11.10
   hardhat-gas-reporter: 1.0.8_hardhat@2.9.7
   prettier: 2.6.2
@@ -100,6 +102,13 @@ packages:
   /@chainlink/contracts/0.4.1:
     resolution: {integrity: sha512-eC8biY6Ks8k9kZKVt5305veCP3z57yyiy6Os5aR6auta6Bp34xWQ/s4qvrifcW4FNgWw1HJPwMPXDGfiehcLjg==}
     dev: true
+
+  /@colors/colors/1.5.0:
+    resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
+    engines: {node: '>=0.1.90'}
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -2646,6 +2655,15 @@ packages:
       colors: 1.4.0
     dev: true
 
+  /cli-table3/0.6.2:
+    resolution: {integrity: sha512-QyavHCaIC80cMivimWu4aWHilIpiDpfm3hGmqAmXVL1UsnbLuBSMd21hTX6VY4ZSDSM73ESLeF8TOYId3rBTbw==}
+    engines: {node: 10.* || >= 12.*}
+    dependencies:
+      string-width: 4.2.3
+    optionalDependencies:
+      '@colors/colors': 1.5.0
+    dev: true
+
   /cli-width/2.2.1:
     resolution: {integrity: sha512-GRMWDxpOB6Dgk2E5Uo+3eEBvtOOlimMmpbFiKuLFnQzYDavtLFY3K5ona41jgN/WdRZtG7utuVSVTL4HbZHGkw==}
     dev: true
@@ -5019,6 +5037,16 @@ packages:
     dependencies:
       ajv: 6.12.6
       har-schema: 2.0.0
+    dev: true
+
+  /hardhat-contract-sizer/2.5.1_hardhat@2.9.7:
+    resolution: {integrity: sha512-28yRb73e30aBVaZOOHTlHZFIdIasA/iFunIehrUviIJTubvdQjtSiQUo2wexHFtt71mQeMPP8qjw2sdbgatDnQ==}
+    peerDependencies:
+      hardhat: ^2.0.0
+    dependencies:
+      chalk: 4.1.2
+      cli-table3: 0.6.2
+      hardhat: 2.9.7_chai@4.3.6
     dev: true
 
   /hardhat-deploy/0.11.10:

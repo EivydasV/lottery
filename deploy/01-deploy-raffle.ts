@@ -6,8 +6,13 @@ const deployRaffle: DeployFunction = async ({
 }: HardhatRuntimeEnvironment) => {
   const { deployer, player } = await getNamedAccounts();
   const { deploy, log } = deployments;
-  console.log("deployer:", deployer);
-  console.log("player:", player);
+
+  const raffle = await deploy("Raffle", {
+    from: deployer,
+    args: [],
+    log: true,
+    waitConfirmations: 6,
+  });
 };
 
 export default deployRaffle;
