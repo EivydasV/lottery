@@ -7,6 +7,12 @@
     "outDir": "dist",
     "declaration": true
   },
-  "include": ["./hardhat.config.ts", "./scripts", "./deploy", "./test"],
-  "files": ["./hardhat.config.ts"]
+  "include": [
+    "./hardhat.config.ts",
+    "./scripts",
+    "./deploy",
+    "./test",
+    "./helper-hardhat-config.ts"
+  ],
+  "files": ["./helper-hardhat-config.ts", "./hardhat.config.ts"]
 }
